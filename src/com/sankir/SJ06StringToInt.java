@@ -10,6 +10,10 @@ Integer and String Class methods usage to convert int value to String and vice v
 package com.sankir;
 
 
+import java.util.Scanner;
+
+import static java.lang.Character.isDigit;
+
 public class SJ06StringToInt {
 
     public static void main(String[] args) {
@@ -48,7 +52,67 @@ public class SJ06StringToInt {
         // instaed we can use number directly
         System.out.println("value of number : " + number);
 
+        System.out.println();
+        System.out.println("Number Class");
+        Number nm = 200;
 
+        System.out.println(nm.byteValue());
+        System.out.println(nm.doubleValue());
+        System.out.println(nm.toString().length());
+
+        System.out.println();
+        System.out.println("Character Class");
+        Character ch = 'k';
+
+        System.out.println(ch.charValue());
+        System.out.println(ch.toString().length());
+        System.out.println(Character.isSpaceChar(ch));
+        System.out.println(Character.isUpperCase(ch));
+        System.out.println(Character.isLowerCase(ch));
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter String");
+        String str2 = sc.next();
+
+        System.out.println(str2);
+
+
+        int sum=0;
+        System.out.println("Find sum of digits in given string ");
+        String alphanumeric = "kiran23sanjay27"; // sum of digits is 14
+
+        alphanumeric = str2;
+        for (int j = 0; j < alphanumeric.length(); j++) {
+            if (isDigit(alphanumeric.charAt(j))) {
+                sum += Character.getNumericValue(alphanumeric.charAt(j));
+            }
+        }
+
+        System.out.println("The sum of digits is : " + sum);
+
+//        System.out.println("Is digit ");
+//        String alphanumeric = "kiran23sanjay27";
+//        String numberstr = "";
+//        for (int j = 0; j < alphanumeric.length(); j++) {
+//            if (isDigit(alphanumeric.charAt(j))) {
+//                numberstr += alphanumeric.charAt(j);
+//            }
+//        }
+//
+//
+//        System.out.println("The sum of digits is : ");
+//        System.out.println(numberstr);
+//        int  sum=0;
+//
+//        for (int j = 0; j < numberstr.length(); j++) {
+//            sum += Character.getNumericValue(numberstr.charAt(j));
+//            }
+//
+//        System.out.println(sum);
+//
+        }
     }
 
-}
+
+
+

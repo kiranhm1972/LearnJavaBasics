@@ -46,15 +46,16 @@ public class SJ15FileReadMatchWrite {
     String matchlines = "";
     for(String str:filelines)  //scna through all lines read
     {
-      if(str.contains(userword))  // if matches - copy to matchlines String and add new line
-        matchlines = matchlines + str +"\n";    // add the new line to matchlines
+      if(str.contains(userword)) // if matches - copy to matchlines String and add new line
+        matchlines = matchlines + str + "\n";   // add the new line to matchlines
+
     }
 
     System.out.println("\nLines in file containing the user given word - Matching Lines :\n");
     System.out.println(matchlines);
 
     System.out.println("Now writing Matching Lines to file ");
-    String outputfilepath = "D:\\1-Data Leap\\1-DATASETS\\outputfile.txt";
+    String outputfilepath = "D:\\1-Data Leap\\1-DATASETS\\outputmatchfile.txt";
 
     writeToFile(outputfilepath, matchlines); // write the file content that was read to another file
 

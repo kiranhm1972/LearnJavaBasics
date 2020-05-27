@@ -1,4 +1,4 @@
-package com.sankir;/*
+/*
 SanKir Technologies - www.sankir.com
 All the programs are copyright@2019-20 of SanKir Technologies
 
